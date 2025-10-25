@@ -166,8 +166,6 @@ HTTP (Hypertext Transfer Protocol) Request adalah mekanisme utama yang digunakan
 
 HTTP menjadi fondasi komunikasi antara klien dan server dalam pengembangan aplikasi web modern.
 
----
-
 ### ⭒ API (Application Programming Interface)
 
 API adalah kumpulan aturan dan protokol yang memungkinkan aplikasi saling berinteraksi dan bertukar data. API berperan sebagai jembatan antara dua sistem berbeda agar dapat saling berkomunikasi tanpa harus mengetahui detail internal satu sama lain.
@@ -189,15 +187,11 @@ API adalah kumpulan aturan dan protokol yang memungkinkan aplikasi saling berint
 7. **Dokumentasi**  
    Setiap API memiliki dokumentasi resmi yang menjelaskan endpoint, parameter, serta contoh permintaan dan respons.
 
----
-
 ### ⭒ Jenis API Berdasarkan Akses
 
 1. **Private API** – Digunakan secara internal oleh organisasi.
 2. **Public API** – Dapat diakses oleh siapa pun dengan izin tertentu.
 3. **Partner API** – Hanya dapat digunakan oleh mitra resmi yang memiliki otorisasi.
-
----
 
 ### ⭒ API dalam Pengembangan Aplikasi
 
@@ -207,8 +201,6 @@ API memungkinkan sistem bekerja secara modular dan efisien. Contohnya:
 - API **Mapbox** memberikan layanan geolokasi dan peta.  
   Dengan menggunakan API, pengembang dapat menambahkan fitur kompleks tanpa membangun sistem dari awal.
 
----
-
 ### ⭒ Autentikasi API
 
 Autentikasi memastikan keamanan dalam pertukaran data.
@@ -217,8 +209,6 @@ Autentikasi memastikan keamanan dalam pertukaran data.
 - **OAuth** digunakan untuk otorisasi tingkat lanjut agar pengguna bisa mengontrol data yang diizinkan diakses.
 
 Proses autentikasi ini memastikan bahwa hanya aplikasi sah yang dapat menggunakan layanan API tertentu.
-
----
 
 ### ⭒ Peran HTTP dalam API
 
@@ -231,8 +221,6 @@ Metode HTTP yang umum digunakan:
 - **DELETE** untuk menghapus data.
 
 Model ini dikenal dengan istilah **RESTful API**, yaitu gaya arsitektur yang memanfaatkan standar HTTP untuk mengelola sumber daya.
-
----
 
 ### ⭒ Manfaat Penggunaan API
 
@@ -250,8 +238,6 @@ Model ini dikenal dengan istilah **RESTful API**, yaitu gaya arsitektur yang mem
 
 JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis. JavaScript dapat berjalan di sisi klien (browser) maupun di sisi server (menggunakan Node.js).
 
----
-
 ### ⭒ Variabel dan Tipe Data
 
 Variabel digunakan untuk menyimpan data.  
@@ -265,8 +251,6 @@ Penulisan dapat menggunakan `var`, `let`, atau `const`.
 - Array (kumpulan data)
 - Object (pasangan key-value)
 
----
-
 ### ⭒ Operator
 
 JavaScript memiliki beberapa jenis operator:
@@ -276,16 +260,12 @@ JavaScript memiliki beberapa jenis operator:
 - Logika: `&&`, `||`, `!`
 - Penugasan: `=`, `+=`, `-=`
 
----
-
 ### ⭒ Struktur Kendali
 
 1. **Percabangan**  
    Menggunakan `if`, `else if`, `else`, dan `switch`.
 2. **Perulangan**  
    Menggunakan `for`, `while`, dan `do...while`.
-
----
 
 ### ⭒ Fungsi
 
@@ -305,8 +285,6 @@ Fungsi dapat disimpan dalam variabel atau ditulis sebagai _arrow function_:
 const kali = (a, b) => a * b
 ```
 
----
-
 ### ⭒ Objek dan Array
 
 **Objek:** Menyimpan data dalam bentuk pasangan kunci–nilai.
@@ -321,8 +299,6 @@ const siswa = { nama: "Budi", umur: 18 }
 const angka = [1, 2, 3, 4]
 ```
 
----
-
 ### ⭒ Konsep Asinkron
 
 JavaScript mendukung pemrosesan asinkron untuk menangani banyak tugas tanpa menunggu satu selesai terlebih dahulu.
@@ -332,8 +308,6 @@ Contoh pendekatan asinkron:
 - **Callback**
 - **Promise**
 - **Async/Await**
-
----
 
 ### ⭒ DOM dan Event
 
@@ -364,8 +338,6 @@ Web server adalah sistem yang berfungsi menyimpan, memproses, dan mengirimkan ha
 
 Server web berperan penting dalam memastikan komunikasi antara klien (browser) dan server terjadi dengan lancar melalui protokol HTTP.
 
----
-
 ### ⭒ Express.js
 
 Express.js adalah framework backend berbasis JavaScript yang dibangun di atas Node.js. Framework ini digunakan untuk membangun aplikasi web dan API dengan cepat, terstruktur, dan efisien.
@@ -384,8 +356,6 @@ Express.js adalah framework backend berbasis JavaScript yang dibangun di atas No
 | Bahasa | JavaScript, C, C++ | JavaScript |
 | Kegunaan | Dasar server-side programming | Membuat aplikasi web dan REST API |
 
----
-
 ### ⭒ Kelebihan Express.js
 
 1. **Cepat dan Efisien**  
@@ -399,8 +369,6 @@ Express.js adalah framework backend berbasis JavaScript yang dibangun di atas No
 5. **Integrasi Mudah dengan Database**  
    Dapat terhubung ke berbagai sistem basis data seperti MongoDB, MySQL, dan PostgreSQL.
 
----
-
 ### ⭒ Templating dan Tampilan
 
 Express.js dapat digabungkan dengan _template engine_ seperti Handlebars (HBS) untuk memisahkan logika program dari tampilan.  
@@ -412,14 +380,10 @@ Dengan sistem ini, tampilan web bisa dibuat dinamis menggunakan data dari server
 - Mengurangi duplikasi kode tampilan.
 - Mendukung penggunaan _partials_ seperti header dan footer bersama di banyak halaman.
 
----
-
 ### ⭒ Routing
 
 Routing dalam Express.js menentukan bagaimana aplikasi merespons permintaan dari pengguna berdasarkan URL tertentu.  
 Setiap rute dapat dikonfigurasi untuk memproses permintaan GET, POST, PUT, atau DELETE sesuai kebutuhan aplikasi.
-
----
 
 ### ⭒ Wildcard Route (404 Handling)
 
