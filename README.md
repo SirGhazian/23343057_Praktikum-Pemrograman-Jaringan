@@ -19,11 +19,11 @@ desc
 
 ## 【 Daftar Jobsheet 】
 
-- [Jobsheet 1 -- Jobsheet1](#jobsheet-01)
-- [Jobsheet 2 -- Jobsheet2](#jobsheet-02)
-- [Jobsheet 3 -- Jobsheet3](#jobsheet-03)
-- [Jobsheet 4 -- Jobsheet4](#jobsheet-04)
-- [Jobsheet 5 -- Jobsheet5](#jobsheet-05)
+- [Jobsheet 1 -- Pengenalan NodeJS](#jobsheet-01)
+- [Jobsheet 2 -- Node.js Module System](#jobsheet-02)
+- [Jobsheet 3 -- HTTP Request and API](#jobsheet-03)
+- [Jobsheet 4 -- JavaScript Essentials](#jobsheet-04)
+- [Jobsheet 5 -- Web Server and ExpressJs](#jobsheet-05)
 - [Jobsheet 6 -- Jobsheet6](#jobsheet-06)
 - [Jobsheet 7 -- Jobsheet7](#jobsheet-07)
 - [Jobsheet 8 -- Jobsheet8](#jobsheet-08)
@@ -39,8 +39,6 @@ desc
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/f36455e4-c903-42b8-b9ff-429f1e3d314a" id="jobsheet-01">
 
 `✦ Pengenalan NodeJS ✦`
-
-### ⭒ Pengenalan Node.js
 
 Node.js adalah lingkungan runtime JavaScript yang berjalan di sisi server. Node.js memungkinkan JavaScript tidak hanya digunakan di browser, tetapi juga untuk membuat aplikasi server, API, dan layanan jaringan.
 
@@ -87,9 +85,7 @@ Node.js memiliki modul bawaan untuk kebutuhan jaringan:
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/154bdf8c-6c20-4401-ab8b-2daec584eb1c" id="jobsheet-02">
 
-`✦ Jobsheet2 ✦`
-
-### ⭒ Node.js Module System
+`✦ Node.js Module System ✦`
 
 Sistem modul di Node.js membantu pengembang membagi kode menjadi bagian-bagian kecil yang bisa digunakan ulang. Setiap file JavaScript di Node.js dianggap sebagai modul yang dapat diimpor ke file lain.
 
@@ -139,19 +135,298 @@ Format untuk menyimpan data pada aplikasi Node.js.
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/8b280a80-fb87-483e-b053-2625eb6a7b8b" id="jobsheet-03">
 
-`✦ Jobsheet3 ✦`
+`✦ HTTP Request and API ✦`
+
+### ⭒ HTTP Request
+
+HTTP (Hypertext Transfer Protocol) Request adalah mekanisme utama yang digunakan klien seperti browser atau aplikasi untuk berkomunikasi dengan server web. Melalui HTTP Request, klien dapat meminta halaman web, data, atau sumber daya lainnya dari server.
+
+**Tahapan utama dalam proses HTTP Request:**
+
+1. **Inisiasi Permintaan**  
+   Klien membuat koneksi ke server menggunakan protokol TCP/IP dan menentukan jenis permintaan, seperti GET, POST, PUT, atau DELETE.
+2. **Pembentukan Request**  
+   Klien menyiapkan pesan HTTP berisi metode, URI, versi HTTP, header, dan isi permintaan jika diperlukan.
+3. **Pengiriman ke Server**  
+   Klien mengirimkan pesan ke server tujuan sesuai alamat IP atau domain yang diminta.
+4. **Pemrosesan oleh Server**  
+   Server menerima permintaan, mengeksekusi instruksi sesuai metode yang digunakan, dan menyiapkan respons.
+5. **Pengiriman Respons**  
+   Server mengirim kembali hasil berupa HTTP Response yang berisi status, header, dan data yang diminta.
+6. **Penerimaan oleh Klien**  
+   Klien menerima data dari server, menampilkannya, dan jika perlu mengirim permintaan tambahan seperti gambar atau file lain.
+7. **Penutupan Koneksi**  
+   Setelah komunikasi selesai, koneksi dapat ditutup atau dipertahankan tergantung konfigurasi server.
+
+**Komponen penting dalam HTTP Response:**
+
+- **Status Code** (misal 200 OK, 404 Not Found, 500 Internal Server Error).
+- **Header** (berisi metadata seperti tipe konten, panjang data, atau cookie).
+- **Body** (isi data yang dikirimkan server ke klien).
+
+HTTP menjadi fondasi komunikasi antara klien dan server dalam pengembangan aplikasi web modern.
+
+---
+
+### ⭒ API (Application Programming Interface)
+
+API adalah kumpulan aturan dan protokol yang memungkinkan aplikasi saling berinteraksi dan bertukar data. API berperan sebagai jembatan antara dua sistem berbeda agar dapat saling berkomunikasi tanpa harus mengetahui detail internal satu sama lain.
+
+**Konsep utama API:**
+
+1. **Abstraksi**  
+   API menyembunyikan detail kompleks sistem dan menyediakan antarmuka sederhana untuk digunakan oleh pengembang.
+2. **Kegunaan**  
+   API memungkinkan integrasi antara aplikasi, perangkat keras, atau layanan pihak ketiga seperti peta, cuaca, dan pembayaran.
+3. **Model Request–Response**  
+   API bekerja dengan pola permintaan dan tanggapan. Klien mengirim _request_ dan API memberikan _response_ dalam format tertentu seperti JSON atau XML.
+4. **Endpoint**  
+   Setiap fungsi API diakses melalui URL tertentu. Contohnya, API cuaca memiliki endpoint untuk mendapatkan data suhu atau ramalan.
+5. **Format Data**  
+   Umumnya menggunakan JSON karena mudah dibaca dan diproses oleh berbagai bahasa pemrograman.
+6. **Autentikasi dan Otorisasi**  
+   API sering dilindungi dengan mekanisme seperti API Key, Token, atau OAuth untuk memastikan hanya pengguna terverifikasi yang bisa mengakses.
+7. **Dokumentasi**  
+   Setiap API memiliki dokumentasi resmi yang menjelaskan endpoint, parameter, serta contoh permintaan dan respons.
+
+---
+
+### ⭒ Jenis API Berdasarkan Akses
+
+1. **Private API** – Digunakan secara internal oleh organisasi.
+2. **Public API** – Dapat diakses oleh siapa pun dengan izin tertentu.
+3. **Partner API** – Hanya dapat digunakan oleh mitra resmi yang memiliki otorisasi.
+
+---
+
+### ⭒ API dalam Pengembangan Aplikasi
+
+API memungkinkan sistem bekerja secara modular dan efisien. Contohnya:
+
+- API **Weatherstack** menyediakan data cuaca secara real-time.
+- API **Mapbox** memberikan layanan geolokasi dan peta.  
+  Dengan menggunakan API, pengembang dapat menambahkan fitur kompleks tanpa membangun sistem dari awal.
+
+---
+
+### ⭒ Autentikasi API
+
+Autentikasi memastikan keamanan dalam pertukaran data.
+
+- **API Key** digunakan untuk mengidentifikasi pengguna atau aplikasi.
+- **OAuth** digunakan untuk otorisasi tingkat lanjut agar pengguna bisa mengontrol data yang diizinkan diakses.
+
+Proses autentikasi ini memastikan bahwa hanya aplikasi sah yang dapat menggunakan layanan API tertentu.
+
+---
+
+### ⭒ Peran HTTP dalam API
+
+Sebagian besar API modern menggunakan protokol HTTP/HTTPS untuk komunikasi.  
+Metode HTTP yang umum digunakan:
+
+- **GET** untuk mengambil data.
+- **POST** untuk mengirim data.
+- **PUT** untuk memperbarui data.
+- **DELETE** untuk menghapus data.
+
+Model ini dikenal dengan istilah **RESTful API**, yaitu gaya arsitektur yang memanfaatkan standar HTTP untuk mengelola sumber daya.
+
+---
+
+### ⭒ Manfaat Penggunaan API
+
+1. **Efisiensi** – Pengembang tidak perlu membuat ulang sistem yang sudah ada.
+2. **Keterhubungan** – Memungkinkan integrasi lintas platform dan layanan.
+3. **Keamanan** – Mengontrol akses data melalui autentikasi.
+4. **Skalabilitas** – Memudahkan pengembangan sistem besar secara bertahap.
+5. **Pemeliharaan Mudah** – Perubahan bisa dilakukan di satu sisi tanpa mengganggu keseluruhan aplikasi.
 
 <hr/>
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/47fc03ce-4c33-4f8a-bffd-0c3bb65bfcc3" id="jobsheet-04">
 
-`✦ Jobsheet4 ✦`
+`✦ JavaScript Essentials ✦`
+
+JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis. JavaScript dapat berjalan di sisi klien (browser) maupun di sisi server (menggunakan Node.js).
+
+---
+
+### ⭒ Variabel dan Tipe Data
+
+Variabel digunakan untuk menyimpan data.  
+Penulisan dapat menggunakan `var`, `let`, atau `const`.
+
+**Tipe data utama:**
+
+- String (teks)
+- Number (angka)
+- Boolean (true/false)
+- Array (kumpulan data)
+- Object (pasangan key-value)
+
+---
+
+### ⭒ Operator
+
+JavaScript memiliki beberapa jenis operator:
+
+- Aritmatika: `+`, `-`, `*`, `/`, `%`
+- Perbandingan: `==`, `===`, `!=`, `>`, `<`
+- Logika: `&&`, `||`, `!`
+- Penugasan: `=`, `+=`, `-=`
+
+---
+
+### ⭒ Struktur Kendali
+
+1. **Percabangan**  
+   Menggunakan `if`, `else if`, `else`, dan `switch`.
+2. **Perulangan**  
+   Menggunakan `for`, `while`, dan `do...while`.
+
+---
+
+### ⭒ Fungsi
+
+Fungsi digunakan untuk mengelompokkan perintah agar mudah dipakai ulang.
+
+**Contoh:**
+
+```
+function tambah(a, b) {
+  return a + b
+}
+```
+
+Fungsi dapat disimpan dalam variabel atau ditulis sebagai _arrow function_:
+
+```
+const kali = (a, b) => a * b
+```
+
+---
+
+### ⭒ Objek dan Array
+
+**Objek:** Menyimpan data dalam bentuk pasangan kunci–nilai.
+
+```
+const siswa = { nama: "Budi", umur: 18 }
+```
+
+**Array:** Menyimpan banyak nilai dalam satu variabel.
+
+```
+const angka = [1, 2, 3, 4]
+```
+
+---
+
+### ⭒ Konsep Asinkron
+
+JavaScript mendukung pemrosesan asinkron untuk menangani banyak tugas tanpa menunggu satu selesai terlebih dahulu.
+
+Contoh pendekatan asinkron:
+
+- **Callback**
+- **Promise**
+- **Async/Await**
+
+---
+
+### ⭒ DOM dan Event
+
+**DOM (Document Object Model)** memungkinkan JavaScript mengubah konten dan struktur HTML secara dinamis.  
+**Event** digunakan untuk merespons tindakan pengguna seperti klik atau input.
 
 <hr/>
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/4253d696-acba-49ec-8579-a95d35666747" id="jobsheet-05">
 
-`✦ Jobsheet5 ✦`
+`✦ Web Server and ExpressJs ✦`
+
+### ⭒ Web Server
+
+Web server adalah sistem yang berfungsi menyimpan, memproses, dan mengirimkan halaman web kepada pengguna melalui jaringan internet. Ketika pengguna mengakses situs web, permintaan dikirim ke web server untuk diproses, kemudian hasilnya dikembalikan ke browser dalam bentuk halaman web.
+
+**Komponen utama web server:**
+
+1. **Perangkat keras (Hardware)**  
+   Komputer yang menyimpan file situs web seperti HTML, CSS, gambar, dan JavaScript.
+2. **Perangkat lunak (Software)**  
+   Program yang mengatur cara file web dikirim ke pengguna menggunakan protokol HTTP.
+
+**Jenis web server:**
+
+- **Statis**: Mengirimkan file apa adanya tanpa modifikasi.
+- **Dinamis**: Menghasilkan konten dengan bantuan server aplikasi dan database sebelum dikirim ke browser.
+
+Server web berperan penting dalam memastikan komunikasi antara klien (browser) dan server terjadi dengan lancar melalui protokol HTTP.
+
+---
+
+### ⭒ Express.js
+
+Express.js adalah framework backend berbasis JavaScript yang dibangun di atas Node.js. Framework ini digunakan untuk membangun aplikasi web dan API dengan cepat, terstruktur, dan efisien.
+
+**Hubungan Node.js dan Express.js:**
+
+- Node.js berperan sebagai lingkungan runtime yang menjalankan JavaScript di sisi server.
+- Express.js menjadi lapisan framework di atas Node.js yang menyederhanakan pembuatan rute, pengelolaan request–response, dan integrasi middleware.
+
+**Perbedaan utama:**
+| Aspek | Node.js | Express.js |
+|-------|----------|------------|
+| Jenis | Runtime Environment | Framework Web |
+| Fungsi | Menjalankan JavaScript di server | Menyusun arsitektur aplikasi web |
+| Fitur | Dasar, masih perlu konfigurasi manual | Lengkap dengan fitur routing, templating, dan middleware |
+| Bahasa | JavaScript, C, C++ | JavaScript |
+| Kegunaan | Dasar server-side programming | Membuat aplikasi web dan REST API |
+
+---
+
+### ⭒ Kelebihan Express.js
+
+1. **Cepat dan Efisien**  
+   Dirancang agar proses pengembangan web menjadi singkat dan terstruktur.
+2. **Penanganan Request dan Error yang Baik**  
+   Mendukung banyak permintaan sekaligus serta memiliki sistem deteksi kesalahan yang kuat.
+3. **Fleksibel dan Mudah Dikustomisasi**  
+   Tidak memiliki aturan ketat dalam penulisan struktur aplikasi, memberi kebebasan pada pengembang.
+4. **Mendukung REST API dan Middleware**  
+   Cocok untuk membangun aplikasi berbasis layanan seperti API.
+5. **Integrasi Mudah dengan Database**  
+   Dapat terhubung ke berbagai sistem basis data seperti MongoDB, MySQL, dan PostgreSQL.
+
+---
+
+### ⭒ Templating dan Tampilan
+
+Express.js dapat digabungkan dengan _template engine_ seperti Handlebars (HBS) untuk memisahkan logika program dari tampilan.  
+Dengan sistem ini, tampilan web bisa dibuat dinamis menggunakan data dari server tanpa menulis HTML secara manual di setiap halaman.
+
+**Keuntungan sistem templating:**
+
+- Memudahkan pembuatan antarmuka yang konsisten.
+- Mengurangi duplikasi kode tampilan.
+- Mendukung penggunaan _partials_ seperti header dan footer bersama di banyak halaman.
+
+---
+
+### ⭒ Routing
+
+Routing dalam Express.js menentukan bagaimana aplikasi merespons permintaan dari pengguna berdasarkan URL tertentu.  
+Setiap rute dapat dikonfigurasi untuk memproses permintaan GET, POST, PUT, atau DELETE sesuai kebutuhan aplikasi.
+
+---
+
+### ⭒ Wildcard Route (404 Handling)
+
+Wildcard route digunakan untuk menangani permintaan yang tidak cocok dengan rute mana pun di aplikasi.  
+Biasanya dimanfaatkan untuk menampilkan halaman kesalahan seperti **404 - Not Found**.
+
+Dengan ini, pengguna tetap mendapatkan informasi yang ramah meskipun halaman yang diminta tidak tersedia.
 
 <hr/>
 
