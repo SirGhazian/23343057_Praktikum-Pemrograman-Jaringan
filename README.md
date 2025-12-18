@@ -5,15 +5,8 @@
 
 Repository ini berisi tugas-tugas dari modul mata kuliah Praktikum Pemrograman Jaringan Universitas Negeri Padang yang dibimbing oleh pak dosen Randi Proska Sandra, S.Pd, M.Sc.
 
-## 【 Tentang Repository 】
-
-<img align="right" alt="Coding" width="60" src="image">
-
-desc
-
 ## 【 Daftar Isi 】
 
-- [Kontribusi](#kontribusi)
 - [Informasi Dosen](#informasi-dosen)
 - [About & Help](#about)
 
@@ -24,14 +17,10 @@ desc
 - [Jobsheet 3 -- HTTP Request and API](#jobsheet-03)
 - [Jobsheet 4 -- JavaScript Essentials](#jobsheet-04)
 - [Jobsheet 5 -- Web Server and ExpressJs](#jobsheet-05)
-- [Jobsheet 6 -- Jobsheet6](#jobsheet-06)
-- [Jobsheet 7 -- Jobsheet7](#jobsheet-07)
-- [Jobsheet 8 -- Jobsheet8](#jobsheet-08)
-- [Jobsheet 9 -- Jobsheet9](#jobsheet-09)
-- [Jobsheet 10 -- Jobsheet10](#jobsheet-10)
-- [Jobsheet 11 -- Jobsheet11](#jobsheet-11)
-- [Jobsheet 12 -- Jobsheet12](#jobsheet-12)
-- [Jobsheet 13 -- Jobsheet13](#jobsheet-13)
+- [Jobsheet 6 -- JSON HTTP Endpoints](#jobsheet-06)
+- [Jobsheet 7 -- Version Control and Deployment](#jobsheet-07)
+- [Jobsheet 8 -- Database NoSQL (MongoDB)](#jobsheet-08)
+- [Jobsheet 9 -- WebSockets & Socket.io](#jobsheet-09)
 
 </a>
 <hr/>
@@ -396,67 +385,95 @@ Dengan ini, pengguna tetap mendapatkan informasi yang ramah meskipun halaman yan
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/88657d6f-1873-4306-9265-cb8fb76e7466" id="jobsheet-06">
 
-`✦ Jobsheet6 ✦`
+`✦ JSON HTTP Endpoints ✦`
+
+JSON HTTP Endpoints adalah titik akhir atau URL pada sebuah aplikasi web yang digunakan untuk mengirim atau menerima data dalam format JSON melalui protokol HTTP. JSON (JavaScript Object Notation) dipilih karena ringan, mudah dibaca manusia, dan mudah diurai oleh komputer.
+
+### ⭒ Fungsi Utama
+
+1. **Mengirim Data**: Mengirim data dari klien (browser) ke server, misal saat mengisi formulir.
+2. **Menerima Data**: Mengambil data dari server dalam format JSON untuk ditampilkan di klien.
+3. **Interaksi Layanan**: Komunikasi antar berbagai layanan web (misal integrasi dengan API pihak ketiga).
+
+### ⭒ JSON HTTP Endpoints vs API Endpoints
+
+- **JSON HTTP Endpoints**: Spesifik menggunakan format JSON dan protokol HTTP. Bagian dari API.
+- **API Endpoints**: Lebih umum, bisa menggunakan berbagai format (XML, JSON, teks) dan protokol (HTTP, WebSocket, dll).
 
 <hr/>
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/e679486d-7624-4caf-b7d3-06dee1e2b994" id="jobsheet-07">
 
-`✦ Jobsheet7 ✦`
+`✦ Version Control and Deployment ✦`
+
+**Version Control** (Pengendalian Versi) adalah sistem yang merekam perubahan-perubahan dari berkas atau sekumpulan berkas dari waktu ke waktu. Git adalah salah satu sistem kontrol versi terdistribusi yang paling populer.
+
+#### ⭒ Manfaat Version Control
+
+1. **Pelacakan Perubahan**: Melacak revisi kode.
+2. **Kolaborasi**: Memungkinkan tim bekerja bersama tanpa konflik.
+3. **Pemulihan**: Mengembalikan kode ke versi sebelumnya jika terjadi kesalahan.
+
+#### ⭒ Perintah Dasar Git
+
+- `git init`: Inisialisasi repositori baru.
+- `git add .`: Menambahkan perubahan ke staging area.
+- `git commit -m "pesan"`: Menyimpan perubahan.
+- `git branch`: Mengelola cabang fitur.
+- `git push`: Mengirim perubahan ke remote repository (GitHub).
+
+### ⭒ App Deployment
+
+Deployment adalah proses memindahkan aplikasi dari lingkungan pengembangan (lokal) ke lingkungan produksi agar dapat diakses pengguna akhir.
+
+- **Continuous Integration/Continuous Deployment (CI/CD)**: Praktik otomatisasi pengujian dan penyebaran aplikasi.
+- **Platform Deployment**: Contoh platform seperti Cyclic, Vercel, atau Heroku dapat digunakan untuk menghosting aplikasi Node.js.
 
 <hr/>
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/6960d85a-c1fa-463a-955c-24fc0e1a748b" id="jobsheet-08">
 
-`✦ Jobsheet8 ✦`
+`✦ Database NoSQL (MongoDB) ✦`
+
+**Database Server** adalah sistem yang dirancang untuk mengelola, menyimpan, dan mengambil data secara terstruktur.
+
+#### ⭒ SQL vs NoSQL
+
+- **SQL (Structured Query Language)**: Database relasional dengan skema tabel yang ketat (contoh: MySQL, PostgreSQL).
+- **NoSQL (Not Only SQL)**: Database fleksibel yang dapat menyimpan data dalam berbagai format seperti dokumen, key-value, dll (contoh: MongoDB).
+
+#### ⭒ MongoDB
+
+MongoDB adalah database NoSQL yang menyimpan data dalam format dokumen JSON/BSON.
+
+- **Database**: Wadah untuk koleksi.
+- **Collection**: Kumpulan dokumen (setara dengan tabel di SQL).
+- **Document**: Unit data (setara dengan baris di SQL).
+
+#### ⭒ Implementasi CRUD dengan Node.js
+
+Praktikum ini mencakup instalasi MongoDB dan implementasi operasi CRUD (Create, Read, Update, Delete) menggunakan library `mongodb` di Node.js.
 
 <hr/>
 
 ## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/77f59d7a-d0bf-442a-80e8-0fb7595513c7" id="jobsheet-09">
 
-`✦ Jobsheet9 ✦`
+`✦ WebSockets & Socket.io ✦`
+
+**Socket Programming** adalah paradigma komunikasi antarproses melalui jaringan menggunakan soket. Ini memungkinkan komunikasi dua arah yang real-time.
+
+#### ⭒ WebSocket vs HTTP
+
+- **HTTP**: Stateless, klien meminta -> server merespons (request-response).
+- **WebSocket**: Persistent connection, komunikasi dua arah simultan (full-duplex), ideal untuk aplikasi real-time (chat, live updates).
+
+#### ⭒ Socket.io
+
+<img width="500" src="https://github.com/user-attachments/assets/d10f3279-0edc-47ab-ba52-b8209324a94e">
+
+Library JavaScript untuk aplikasi web real-time. Memungkinkan komunikasi event-based bi-directional antara klien dan server dengan latensi rendah.
 
 <hr/>
-
-## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/f257220c-951b-4926-97b7-35d4eb960045" id="jobsheet-10">
-
-`✦ Jobsheet10 ✦`
-
-<hr/>
-
-## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/ace3e92e-606b-49cf-89ff-f9121e64c33e" id="jobsheet-11">
-
-`✦ Jobsheet11 ✦`
-
-<hr/>
-
-## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/336e7ade-ebbc-4df9-9abb-9332f57e10aa" id="jobsheet-12">
-
-`✦ Jobsheet12 ✦`
-
-<hr/>
-
-## <img height="50" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/a053617b-cbc1-484d-88fe-2d9de0b817c0" id="jobsheet-13">
-
-`✦ Jobsheet13 ✦`
-
-<hr/>
-<hr/>
-
-</br>
-</a>
-<hr/>
-<hr/>
-
-## <a id="kontribusi"></a>【 Kontribusi 】
-
-Saya menyambut kontribusi dari siapa pun. Jika Anda ingin berkontribusi, silakan fork repository ini, buat branch baru untuk perubahan Anda, dan ajukan pull request. Pastikan untuk memberikan deskripsi yang jelas tentang apa yang Anda ubah dan mengapa.
-
-1. Fork repository ini.
-2. Buat branch fitur baru: `git checkout -b fitur-anda`.
-3. Commit perubahan Anda: `git commit -am 'Menambahkan fitur baru'`.
-4. Push ke branch: `git push origin fitur-anda`.
-5. Buat pull request baru.
 
 ## <a id="informasi-dosen"></a>【 Informasi Dosen 】
 
